@@ -1,0 +1,44 @@
+reviewers:
+  # The default reviewers
+  defaults:
+    - repository-owners # group
+    - core-contributors # group
+
+  # Reviewer groups each of which has a list of GitHub usernames
+  groups:
+    repository-owners:
+      - Lyamoore
+    core-contributors:
+      - Lyamoore # username
+      - Super-Cereal # username
+      - Tonk0 # username
+
+  # Reviewers per author.
+  # Keys are reviewees, each of which has an array of reviewers.
+  per_author:
+    Lyamoore:
+      - core-contributors
+    Tonk0:
+      - core-contributors
+    Super-Cereal:
+      - core-contributors
+
+files:
+  # Keys are glob expressions.
+  # You can assign groups defined above as well as GitHub usernames.
+  "**":
+    - core-contributors
+
+options:
+  ignore_draft: true
+  ignored_keywords:
+    - DO NOT REVIEW
+  enable_group_assignment: false
+
+  # Randomly pick reviewers up to this number.
+  # Do not set this option if you'd like to assign all matching reviewers.
+  number_of_reviewers: 2
+
+  # If it's true, the last matching files-change pattern takes the most precedence (CODEOWNERS-compatible)
+  # See https://github.com/necojackarc/auto-request-review/pull/80 for more details.
+  last_files_match_only: false
