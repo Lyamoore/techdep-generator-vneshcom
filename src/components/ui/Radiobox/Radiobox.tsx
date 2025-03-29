@@ -5,7 +5,7 @@ import { ComponentProps } from 'react';
 interface RadioboxProps extends ComponentProps<'input'> {
   label: string;
 }
-function Radiobox({ label, ...rest }: RadioboxProps) {
+export function Radiobox({ label, ...rest }: RadioboxProps) {
   return (
     <label className="radibox-label">
       <input type="radio" {...rest} />
@@ -13,5 +13,3 @@ function Radiobox({ label, ...rest }: RadioboxProps) {
     </label>
   );
 }
-
-export default Radiobox;
