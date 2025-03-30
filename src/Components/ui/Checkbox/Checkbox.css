@@ -1,0 +1,32 @@
+.checkbox {
+display: none;
+}
+
+.label {
+cursor: pointer;
+position: relative;
+display: flex;
+}
+
+.castom {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.castom svg {
+  opacity: 0;
+}
+
+.checkbox:checked + .label .castom  {
+  background-color: #D9D9D9;
+}
+
+.checkbox:checked + .label .castom svg {
+  opacity: 1;
+}
