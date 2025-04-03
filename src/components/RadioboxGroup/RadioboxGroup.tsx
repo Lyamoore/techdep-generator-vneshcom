@@ -1,9 +1,9 @@
-import '../ui/Radiobox/Radiobox.css';
 import './RadioboxGroup.css';
 
 import { ChangeEvent, CSSProperties } from 'react';
 
 import { Flex } from '../Flex';
+import { Radiobox } from '../ui/Radiobox/Radiobox';
 
 interface RadioGroupOptions {
   label: string;
@@ -12,40 +12,27 @@ interface RadioGroupOptions {
 }
 interface RadioGroupProps {
   title: string;
-  titleMarginBottom?: string;
   name: string;
   options: RadioGroupOptions[];
-  direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
-  justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-  align?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
-  gap?: string;
+  direction?: 'row' | 'column';
   style?: CSSProperties;
   className?: string;
 }
 export const RadioboxGroup = (
   {
     title,
-    titleMarginBottom = '10px',
     name,
     options,
     direction = 'column',
-    justify = 'flex-start',
-    align = 'flex-start',
-    wrap = 'nowrap',
-    gap = '10px',
     className = '',
     style = {},
   }: RadioGroupProps) => {
   return (
     <div className={`radiobox-group ${className}`} style={style}>
-      <h4 style={{ marginBottom: titleMarginBottom }}>{title}</h4>
-      <Flex direction={direction} justify={justify} align={align} wrap={wrap} gap={gap}>
+      <h4>{title}</h4>
+      <Flex direction={direction} gap="12px">
         {options.map(option => (
-          <label key={option.value} className="radibox-label">
-            <input value={option.value} name={name} type="radio" />
-            {option.label}
-          </label>
+          <Radiobox key={option.value} label={option.label} name={name} value={option.value} onChange={option.onChange} />
         ))}
       </Flex>
     </div>
