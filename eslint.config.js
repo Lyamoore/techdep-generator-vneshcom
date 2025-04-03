@@ -57,6 +57,7 @@ export default tseslint.config(
       "simple-import-sort/exports": "error",
       "import/newline-after-import": ["error"],
       "@typescript-eslint/no-non-null-assertion": "off",
+      "import/no-unresolved": "off",
     },
   },
 )
