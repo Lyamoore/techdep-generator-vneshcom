@@ -1,0 +1,7 @@
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-group h4 {
+  margin-bottom: 8px;
+}
