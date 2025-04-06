@@ -1,0 +1,32 @@
+.input-label {
+  color: var(--input-text-color);
+}
+.input-label input {
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 8px;
+  background-color: var(--input-bg);
+  outline: none;
+  color: var(--input-text-color);
+}
+.input-label input::placeholder {
+  color: var(--input-text-color);
+}
+.input-label input:focus {
+  background-color: var(--input-bg-focus);
+}
+
+.input-comment {
+  font-size: small;
+  margin-top: 4px;
+}
+.input-error {
+  font-size: small;
+  margin-top: 8px;
+  color: var(--error-color);
+}
+.input-label-error input {
+  outline: 1px solid var(--error-color);
+  /* border: 1px solid var(--error-color); */
+}
