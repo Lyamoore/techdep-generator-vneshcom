@@ -1,0 +1,14 @@
+.wrapper {
+  font-size: 12px;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

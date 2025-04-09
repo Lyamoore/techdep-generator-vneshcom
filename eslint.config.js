@@ -58,6 +58,7 @@ export default tseslint.config(
       "import/newline-after-import": ["error"],
       "@typescript-eslint/no-non-null-assertion": "off",
       "import/no-unresolved": "off",
+      "@stylistic/arrow-parens": "off",
     },
   },
 )
