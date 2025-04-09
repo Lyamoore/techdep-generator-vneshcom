@@ -1,11 +1,15 @@
+.container {
+  display: inline-block;
+}
+
 .checkbox {
-display: none;
+  display: none;
 }
 
 .label {
-cursor: pointer;
-position: relative;
-display: flex;
+  cursor: pointer;
+  position: relative;
+  display: flex;
 }
 
 .castom {
