@@ -10,12 +10,10 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({ variant = 'secondary', size = 'full', children, disabled, type = 'button' }: IButton) => {
+  const buttonClasses = [styles.button, styles[`button--${variant}`], styles[`button--${size}`]].join(' ');
+
   return (
-    <button
-      className={`${styles.button} ${styles[`button--${variant}`]} ${styles[`button--${size}`]}`}
-      disabled={disabled}
-      type={type === 'submit' ? 'submit' : 'button'}
-    >
+    <button className={buttonClasses} disabled={disabled} type={type === 'submit' ? 'submit' : 'button'}>
       {children}
     </button>
   );
