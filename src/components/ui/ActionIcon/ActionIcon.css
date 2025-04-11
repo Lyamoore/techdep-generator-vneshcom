@@ -1,0 +1,11 @@
+.button-action-icon {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  line-height: 0;
+  flex-shrink: -1;
+}
+.button-action-icon:active {
+  transform: translateY(2px);
+}

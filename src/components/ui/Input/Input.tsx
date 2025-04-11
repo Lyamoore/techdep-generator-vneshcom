@@ -1,6 +1,6 @@
 import './Input.css';
 
-import { ComponentProps } from 'react';
+import { ComponentProps, CSSProperties } from 'react';
 
 import { Flex } from '../../Flex';
 
@@ -8,10 +8,11 @@ interface InputProps extends ComponentProps<'input'> {
   title?: string;
   comment?: string;
   error?: string;
+  style?: CSSProperties;
 }
-export const Input = ({ title, comment, error, ...rest }: InputProps) => {
+export const Input = ({ title, comment, error, style = {}, ...rest }: InputProps) => {
   return (
-    <label className={`input-label ${error ? 'input-label-error' : ''}`}>
+    <label className={`input-label ${error ? 'input-label-error' : ''}`} style={style}>
       <Flex direction="column">
         {title && <h4>{title}</h4>}
         <input {...rest} />
