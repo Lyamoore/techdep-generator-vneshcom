@@ -20,11 +20,11 @@
 }
 
 .castom {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@
 
 .label--top .castom {
   margin-right: 0;
-  margin-top: 0.5rem;
+  margin-top: 8px;
 }
 
 .checkbox:checked + .label .castom  {
