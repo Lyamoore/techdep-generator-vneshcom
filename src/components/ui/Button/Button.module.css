@@ -8,8 +8,8 @@
 
 .button--full {
   border-radius: 7px;
-  width: 22.9375rem;
-  height: 2.4375rem;
+  width: 367px;
+  height: 39px;
 }
 
 .button--main {
@@ -35,8 +35,8 @@
 .button--small {
   border: 1px solid #D9D9D9;
   border-radius: 4px;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
 }
 
 .button--small:hover {
