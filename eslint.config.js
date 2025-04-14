@@ -59,6 +59,9 @@ export default tseslint.config(
       "@typescript-eslint/no-non-null-assertion": "off",
       "import/no-unresolved": "off",
       "@stylistic/arrow-parens": "off",
+      "@stylistic/indent": "off",
+      "@stylistic/indent-binary-ops": "off",
+      "@stylistic/operator-linebreak": 0
     },
   },
 )
