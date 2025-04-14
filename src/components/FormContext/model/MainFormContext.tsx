@@ -1,6 +1,6 @@
 import { createChangeableContext } from '../lib/createChangeableContext';
 
-type MainFormContext = (
+export type MainFormContext = (
   | {
       participantsType?: 'acitivityUnderPost';
       postLink?: string;
