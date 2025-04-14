@@ -1,6 +1,6 @@
 import { createChangeableContext } from '../lib/createChangeableContext';
 
-interface FinalFormContext {
+export interface FinalFormContext {
   countOfWinners?: number;
 }
 

@@ -2,7 +2,7 @@ import { createChangeableContext } from '../lib/createChangeableContext';
 
 type ActivityTypes = 'likes' | 'comments' | 'reposts';
 
-interface ActivitiesFormContext {
+export interface ActivitiesFormContext {
   activityTypes?: ActivityTypes;
   activitiesCondition?: 'any' | 'all';
   activitiesPriority?: ActivityTypes;
