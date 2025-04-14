@@ -7,6 +7,19 @@
 
 @font-face {
   font-family: 'Golos';
+  src: url(./lib/fonts/GolosText-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url(./lib/fonts/GolosText-SemiBold.ttf);
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: 'Golos';
   src: url(./lib/fonts/GolosText-Bold.ttf);
   font-weight: 700;
 }
@@ -29,7 +42,35 @@
   --input-bg: #ffffff1a;
   --input-bg-focus: #ffffff40;
   --input-text-color: #ffffffbf;
+  --checkbox-color: #d9d9d9;
+  --button-color: #ffffff;
+  --button-text-main: #1c1a1e;
+  --button-small: #d9d9d9;
+  --cgwi-color: #d9d9d9;
+
 
   font-family: 'Golos', sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 14px;
   color: var(--font-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 12px;
 }

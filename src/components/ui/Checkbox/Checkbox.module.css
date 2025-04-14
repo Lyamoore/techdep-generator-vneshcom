@@ -22,7 +22,7 @@
 .castom {
   width: 16px;
   height: 16px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid var(--checkbox-color);
   border-radius: 4px;
   margin-right: 8px;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 .checkbox:checked + .label .castom  {
-  background-color: #D9D9D9;
+  background-color: var(--checkbox-color);
 }
 
 .checkbox:checked + .label .castom svg {
