@@ -2,12 +2,11 @@ import './ActionIcon.css';
 
 import { ComponentProps, ReactNode } from 'react';
 
-interface ActionIconProps extends ComponentProps<'button'> {
+type ActionIconProps = ComponentProps<'button'> & {
   children: ReactNode;
-  variant?: 'filled' | 'transparent';
   bg?: string;
   className?: string;
-}
+} & ({ variant: 'filled'; bg: string } | { variant?: 'transparent' });
 export const ActionIcon = ({ children, className = '', variant = 'transparent', bg = '', ...rest }: ActionIconProps) => {
   return (
     // говорит, что нельзя динамически определять тип кнопки
