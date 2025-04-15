@@ -15,7 +15,7 @@ export const Checkbox = ({ label, labelPosition = 'right', id, ...props }: Props
             <path d="M1 4.88L3.13333 6.8L7.4 2" stroke="#444444" strokeLinecap="round" />
           </svg>
         </div>
-        {label}
+        <p>{label}</p>
       </label>
     </div>
   );
