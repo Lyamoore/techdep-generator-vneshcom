@@ -1,22 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router';
+
 import { FormContextProvider } from './components/FormContext';
-import { InputDNDList } from './components/InputDNDList';
-import { MainFormPage } from './pages/MainFormPage';
+import { FinalPage } from './pages/FinalPage';
+import { MVPFormPage } from './pages/MVPFormPage';
 
 function App() {
   return (
     <div style={{ background: 'var(--bg-color)', height: '100vh', padding: '40px' }}>
       <FormContextProvider>
-        <InputDNDList
-          options={[
-            { value: '1', label: 'Лайки' },
-            { value: '2', label: 'Комментарии' },
-            { value: '3', label: 'Репосты' },
-          ]}
-          title="Выберите приоритет активностей розыгрыша"
-          name="adsf"
-        />
-
-        <MainFormPage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" Component={MVPFormPage} />
+            <Route path="/final" Component={FinalPage} />
+          </Routes>
+        </BrowserRouter>
       </FormContextProvider>
     </div>
   );

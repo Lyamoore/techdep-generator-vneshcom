@@ -1,8 +1,8 @@
 import { createContext, type PropsWithChildren, useContext, useState } from 'react';
 
-/** Создает контекст, который можно менять и который синхронизируется с sessionStorage */
-export function createChangeableContext<T>(defaultValue: T, sessionStorageId: string) {
-  const savedValue = sessionStorage.getItem(sessionStorageId);
+/** Создает контекст, который можно менять и который синхронизируется с localStorage */
+export function createChangeableContext<T>(defaultValue: T, localStorageId: string) {
+  const savedValue = localStorage.getItem(localStorageId);
   const savedOrDefaultValue = savedValue ? JSON.parse(savedValue) : defaultValue;
 
   const Context = createContext<[T, (newValue: T) => void]>([savedOrDefaultValue, () => undefined]);
@@ -22,7 +22,7 @@ export function createChangeableContext<T>(defaultValue: T, sessionStorageId: st
 
     const handleSetContextValue = (newValue: T) => {
       setContextValue(newValue);
-      sessionStorage.setItem(sessionStorageId, JSON.stringify(newValue));
+      localStorage.setItem(localStorageId, JSON.stringify(newValue));
     };
 
     return <Context.Provider value={[contextValue, handleSetContextValue]}>{children}</Context.Provider>;
